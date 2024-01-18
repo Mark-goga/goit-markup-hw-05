@@ -642,8 +642,7 @@ img {
     border: none;
     background-color: #404BBF;
 }
-.modal-button-close:active {
-    fill: #FFFFFF;
+.modal-button-close:focus {
     border: none;
     background-color: #404BBF;
 }
@@ -652,7 +651,7 @@ img {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button-close:hover  .modal-close-svg,
-.modal-button-close:active  .modal-close-svg{
+.modal-button-close:focus  .modal-close-svg{
     fill: #ffffff
 }
 .modal-title {
