@@ -526,7 +526,60 @@ img {
 }
 .footer-icon {
 }
-
+.form-footer {
+    margin-left: 80px;
+}
+.form-footer-p {
+    color:#FFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+}
+.footer-form-wrap {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.footer-input {
+    width: 264px;
+    padding: 8px 8px 8px 16px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid  #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+}
+.footer-input::placeholder {
+    color:  #FFF;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2.0;
+    letter-spacing: 0.04em;
+}
+.footer-butt {
+    color: #FFF;
+    text-align: center;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+    background: #4D5AE5;
+    padding: 8px 64px 8px 24px;
+    border: none;
+}
+.footer-butt-wrap {
+    position: relative;
+}
+.icon-form-footer {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 /*? --------------MODAL----------------- */
 .backdrop {
     height: 100%;
