@@ -761,11 +761,11 @@ img {
     text-decoration-line: underline;
 }
 .modal-label-span {
+    display: inline-flex;
     width: 16px;
     height: 16px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.40);
-    display: inline-flex;
     justify-content: center;
     align-items: center;
     fill: transparent;
