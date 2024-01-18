@@ -598,6 +598,7 @@ img {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
@@ -608,15 +609,20 @@ img {
 
 .modal {
     width: 408px;
-    height: 584px;
+    min-height: 584px;
     position: absolute;
     background-color:  #FCFCFC;
     border-radius: 4px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);;
     padding: 72px 24px 24px 24px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-button-close {
     width: 24px;
     height: 24px;
@@ -629,8 +635,10 @@ img {
     position: absolute;
     top: 24px;
     right: 24px;
+    padding: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.modal-button-close:hover,
 .modal-button-close:active {
     fill: #FFFFFF;
     border: none;
@@ -638,8 +646,12 @@ img {
 }
 
 .modal-close-svg {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.modal-button-close:hover + .modal-close-svg,
+.modal-button-close:active + .modal-close-svg{
+    fill: #ffffff
+}
 .modal-title {
     color: #2E2F42;
     text-align: center;
@@ -658,22 +670,23 @@ img {
 }
 .form-label {
     color: #8E8F99;
-
+    display: block;
     font-family: Roboto;
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.16; /* 116.667% */
+    line-height: 1.17; /* 116.667% */
     letter-spacing: 0.04em;
     margin-bottom: 4px;
 }
 .modal-input {
+    background-color: transparent;
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
     width: 100%;
     height: 40px;
     outline: transparent;
     padding-left: 38px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:focus {
     border: 1px solid #4D5AE5;
@@ -688,23 +701,29 @@ img {
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-textarea {
     height: 120px;
     width: 100%;
+    color: rgba(46, 47, 66, 0.40);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17em; 
+    letter-spacing: 0.04em;
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
     resize: none;
+    background-color: transparent;
     outline: transparent;
-    padding-top: 8px;
-    padding-left: 16px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 8px 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-textarea::placeholder {
     color: rgba(46, 47, 66, 0.40);
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.16em; 
+    line-height: 1.17em; 
     letter-spacing: 0.04em;
 }
 .modal-textarea:focus {
@@ -726,7 +745,7 @@ img {
     font-family: Roboto;
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.16; /* 116.667% */
+    line-height: 1.17; /* 116.667% */
     letter-spacing: 0.04em;
     display: flex;
     align-items: center;
@@ -744,35 +763,37 @@ img {
     height: 16px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.40);
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     fill: transparent;
     margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-check{ 
 }
 .modal-check:checked + .label-check .modal-label-span {
     border: none;
     background-color: #404BBF;
-    fill: #FFFFFF;
+    fill: #F4F4FD;;
 }
 .modal-button {
     display: block;
     margin: 0 auto;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     border-radius: 4px;
     background: #4D5AE5;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     padding: 16px 32px;
-    color: #FFF;
+    color: #ffffff;
     text-align: center;
-    font-family: inherit;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5; /* 150% */
     letter-spacing: 0.04em;
     cursor: pointer;
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
