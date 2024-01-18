@@ -526,11 +526,15 @@ img {
 }
 .footer-icon {
 }
-.form-footer {
+.container-form {
     margin-left: 80px;
 }
+.form-footer {
+    display: flex;
+    gap: 24px;
+}
 .form-footer-p {
-    color:#FFF;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
@@ -544,41 +548,45 @@ img {
 }
 .footer-input {
     width: 264px;
-    padding: 8px 8px 8px 16px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    color: #ffffff;
     outline: none;
     border-radius: 4px;
-    border: 1px solid  #FFF;
+    border: 1px solid #ffffff;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     background-color: transparent;
 }
 .footer-input::placeholder {
-    color:  #FFF;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 2.0;
-    letter-spacing: 0.04em;
+    color: #ffffff;
 }
 .footer-butt {
-    color: #FFF;
+    min-width: 165px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    cursor: pointer;
     text-align: center;
-    font-family: inherit;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5; /* 150% */
     letter-spacing: 0.04em;
     border-radius: 4px;
     background: #4D5AE5;
-    padding: 8px 64px 8px 24px;
     border: none;
 }
 .footer-butt-wrap {
     position: relative;
 }
 .icon-form-footer {
-    position: absolute;
-    right: 24px;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-left: 16px;
+    fill: #FFFFFF
 }
 /*? --------------MODAL----------------- */
 .backdrop {
